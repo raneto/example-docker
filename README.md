@@ -5,8 +5,8 @@ Raneto Example with Docker
 # Getting Started
 1. Clone or Fork this repository
     ```bash
-    git clone https://github.com/raneto/example.git
-    cd example
+    git clone https://github.com/raneto/example-docker.git
+    cd example-docker
    ```
 1. Run `docker compose up -d` (or the older version `docker-compose up -d`)
 1. Visit [http://localhost:3000](http://localhost:3000) to verify Raneto is working
