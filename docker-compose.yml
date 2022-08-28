@@ -1,0 +1,21 @@
+---
+version: "3.8"
+
+services:
+
+  ##################
+  ##### Raneto #####
+  ##################
+  # https://hub.docker.com/r/raneto/raneto
+  postgres:
+    # We don't recommend using the ":latest" tag
+    # image: raneto/raneto:latest
+    # Use explicit versions instead and monitor them
+    image: raneto/raneto:0.0.1-alpine
+    container_name: raneto
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./config:/opt/raneto/config
+      - ./content:/opt/raneto/content
