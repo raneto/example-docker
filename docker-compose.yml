@@ -1,13 +1,10 @@
 ---
-version: "3.8"
-
 services:
-
   ##################
   ##### Raneto #####
   ##################
   # https://hub.docker.com/r/raneto/raneto
-  postgres:
+  raneto:
     # We don't recommend using the ":latest" tag
     # image: raneto/raneto:latest
     # Use explicit versions instead and monitor them
