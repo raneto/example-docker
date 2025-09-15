@@ -1,7 +1,10 @@
-"use strict";
-
 // Modules
-var path = require("path");
+import path from "path";
+import { fileURLToPath } from "url";
+
+// Get __dirname equivalent in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Which Theme to Use?
 //
@@ -44,10 +47,7 @@ var config = {
   support_email: "",
 
   // Footer Text / Copyright
-  copyright:
-    "Copyright &copy; " +
-    new Date().getFullYear() +
-    ' - <a href="https://raneto.com">Powered by Raneto</a>',
+  copyright: `Copyright &copy; ${new Date().getFullYear()} Raneto Team`,
 
   // Excerpt length (used in search)
   excerpt_length: 400,
@@ -105,7 +105,7 @@ var config = {
   oauth2: {
     client_id: "GOOGLE_CLIENT_ID",
     client_secret: "GOOGLE_CLIENT_SECRET",
-    callback: "http://localhost:3000/auth/google/callback",
+    callback: "http://localhost:8080/auth/google/callback",
     hostedDomain: "google.com",
   },
   secret: "someCoolSecretRightHere",
@@ -172,4 +172,4 @@ var config = {
 };
 
 // Exports
-module.exports = config;
+export default config;
